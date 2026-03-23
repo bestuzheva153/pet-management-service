@@ -22,9 +22,11 @@ class CatDaoTest {
     void setUp() {
         catDao = mock(CatDao.class);
 
-        testCat = new Cat("Барсик", new Date(14 - 4 - 2024), "Мейн-кун", "Черный");
+        Cat testCat = new Cat();
         testCat.setId(1L);
         testCat.setName("Барсик");
+        testCat.setBreed("мейн-кун");
+        testCat.setColor("черный");
         testCat.setBirthDate(LocalDate.of(2020, 5, 10));
         testCat.setBreed("Сибирская");
         testCat.setColor(String.valueOf(Color.BLACK));
